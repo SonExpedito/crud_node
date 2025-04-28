@@ -1,0 +1,18 @@
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Futura PT';
+}
+
+
+.bg-nav {
+    background: #000;
+
+}
+
+.font-titleNK {
+    font-weight: 800;
+}

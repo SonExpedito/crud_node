@@ -1,0 +1,49 @@
+<div class="w-full h-fit flex items-center justify-center p-4 pt-6">
+    <h1 class="font-titleNK text-center text-4xl uppercase">Agendamentos <i>NIKE</i></h1>
+</div>
+
+
+<div class="w-full h-fit flex flex-col justify-center items-center gap-y-4 ">
+    <form action="/cadastrar" method="POST">
+        <div class="flex flex-col h-fit w-full">
+            <p class="font-bold text-xl">Nome:</p>
+            <input required type="text" name="nome" id="nome"
+                class="w-96 border-2 border-gray-300 rounded-full px-4 py-1 mt-1 bg-transparent">
+        </div>
+
+        <div class="flex flex-col h-fit w-full">
+            <p class="font-bold text-xl">Telefone:</p>
+            <input required type="number" name="telefone" id="telefone" placeholder="(00)00000-0000"
+                class="w-96 border-2 border-gray-300 rounded-full px-4 py-1 mt-1 bg-transparent">
+        </div>
+
+        <div class="flex flex-col h-fit w-full">
+            <p class="font-bold text-xl">Origem:</p>
+            <select required type="text" name="origem" id="origem"
+                class="w-96 border-2 border-gray-300 rounded-full px-4 py-1 mt-1 bg-transparent">
+                <option value="celular" selected>Celular</option>
+                <option value="whatsapp">Whatsapp</option>
+                <option value="telefone_fixo">Telefone Fixo</option>
+            </select>
+        </div>
+
+        <div class="flex flex-col h-fit w-full">
+            <p class="font-bold text-xl">Data Contato:</p>
+            <input required type="date" name="data_contato" id="data_contato"
+                class="w-96 border-2 border-gray-300 rounded-full px-4 py-1 mt-1 bg-transparent">
+        </div>
+
+        <div class="flex flex-col h-fit w-full">
+            <p class="font-bold text-xl">Observacao:</p>
+            <textarea required type="text" name="observacao" id="observacao"
+                class="w-96 border-2 border-gray-300 rounded-3xl p-4 mt-1 bg-transparent overflow-y-hidden"> </textarea>
+        </div>
+
+        <div class="flex flex-col h-fit w-full items-center mt-4">
+            <button type="submit" required class="w-32 bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-full transition-all cursor-pointer ">
+                Cadastrar
+            </button>
+        </div>
+    </form>
+
+</div>
