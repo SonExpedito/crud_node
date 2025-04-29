@@ -12,5 +12,8 @@ Reposit√≥rio referente ao primeiro projeto CRUD com Node.js, feito com estiliza√
 
 ### Tecnologias
 
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Node.js](https://skillicons.dev/icons?i=nodejs)
+![TailwindCSS](https://skillicons.dev/icons?i=tailwind)
+![Express](https://skillicons.dev/icons?i=express)
+![MySQL](https://skillicons.dev/icons?i=mysql)
+![Sequelize](https://skillicons.dev/icons?i=sequelize)
