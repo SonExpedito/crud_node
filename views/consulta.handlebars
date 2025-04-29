@@ -1,0 +1,44 @@
+<div class="w-full h-fit flex items-center justify-center p-4 pt-6">
+    <h1 class="font-titleNK text-center text-4xl uppercase">Marcados <i>NIKE</i></h1>
+</div>
+
+<div class="w-full h-fit grid grid-cols-3 items-center justify-items-center  content-center gap-4">
+    {{#each post}}
+    {{#dataValues}}
+    <div class="w-80 h-32 bg-white  shadow-2xl rounded-4xl flex border-gray-400 border-2 overflow-hidden">
+        <div class="w-2/6 h-full flex flex-col items-center justify-center">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                class="w-16 h-16 object-cover rounded-full border-2 border-blue-600 object-cover">
+            <p class="font-bold">{{nome}}</p>
+        </div>
+        <div class="w-4/6 h-full flex flex-col items-center justify-center">
+            <div class="w-full h-fit flex justify-center items-center gap-2">
+                <p class="font-medium">{{telefone}}</p>
+                <p>-</p>
+                <p class="font-bold capitalize">{{origem}}</p>
+            </div>
+            <div class="h-fit w-full items-center justify-center">
+                <p>{{observacao}}</p>
+            </div>
+            <p class="text-sm">{{data_contato}}</p>
+            <div class="w-full h-fit flex gap-4 justify-center items-center mt-1">
+                <button type="button" class="w-20 bg-green-400 hover:bg-green-500 text-white font-bold py-1 px-4 
+                rounded-full transition-all cursor-pointer"><a href="/editar/{{id}}"
+                        style="color:inherit">Editar</a></button>
+
+                <button type="button" class="w-20 bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-4 
+                rounded-full transition-all cursor-pointer"><a href="/excluir/{{id}}"
+                        style="color:inherit">Excluir</a></button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    {{/dataValues}}
+    {{/each}}
+
+
+
+</div>

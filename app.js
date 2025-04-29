@@ -4,7 +4,13 @@ import { engine } from 'express-handlebars';
 import {Agendamentos} from './banco/post.js'
 const app = express();
 
-app.engine('handlebars', engine({ defaultLayout: 'main' }));
+app.engine('handlebars', engine({
+    defaultLayout: 'main',
+    helpers: {
+      eq: (a, b) => a === b
+    }
+  }));
+  
 app.set("view engine", "handlebars")
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -29,6 +35,7 @@ app.get("/consulta", function (req, res) {
     })
 })
 
+//Editor de tela
 app.get("/editar/:id", function (req, res) {
     Agendamentos.findAll({ where: { 'id': req.params.id } }).then(function (post) {
         res.render("editar", { post })
@@ -37,6 +44,7 @@ app.get("/editar/:id", function (req, res) {
     })
 })
 
+//Exclusão
 app.get("/excluir/:id", function (req, res) {
     Agendamentos.destroy({ where: { 'id': req.params.id } }).then(function () {
         res.render("primeira_pagina")
